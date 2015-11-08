@@ -7,11 +7,20 @@ package net.emteeware.common;
 public class DigitSum {
     /**
      * @param input
-     * An integer you want to calculate the sum of digits for.
+     * An integer you want to calculate the sum of digits for. (Base 10)
      * @return
-     * The sum of digits for the provided input.
+     * The sum of digits for the provided input. (Base 10)
      */
     public static int getDigitSum(int input) {
-        return 0;
+        int digitSum = 0;
+        int summedNumber = input;
+        int nextDigit;
+         do {
+            nextDigit = summedNumber%10;
+            digitSum += nextDigit;
+            summedNumber /= 10;
+        } while(summedNumber > 0);
+
+        return digitSum;
     }
 }
