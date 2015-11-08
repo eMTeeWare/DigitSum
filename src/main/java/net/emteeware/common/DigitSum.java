@@ -1,3 +1,5 @@
+package net.emteeware.common;
+
 /**
  * Created by Merlin Thomas on 2015-11-08.
  * Copyright 2015 eMTeeWare
