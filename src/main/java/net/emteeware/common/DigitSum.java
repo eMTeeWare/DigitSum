@@ -8,10 +8,14 @@ public class DigitSum {
     /**
      * @param input
      * An integer you want to calculate the sum of digits for. (Base 10)
+     * For negative input, a IllegalArgumentException will be thrown.
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
-    public static int getDigitSum(int input) {
+    public static int getDigitSum(int input) throws IllegalArgumentException {
+        if(input < 0) {
+            throw new IllegalArgumentException("Input for getDigitSum() must not be negative.");
+        }
         int digitSum = 0;
         int summedNumber = input;
         int nextDigit;
