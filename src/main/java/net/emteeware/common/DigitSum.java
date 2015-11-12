@@ -27,4 +27,8 @@ public class DigitSum {
 
         return digitSum;
     }
+
+    public static int getDigitalRoot(int input) throws IllegalArgumentException {
+        return 0;
+    }
 }
