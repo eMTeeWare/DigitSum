@@ -1,3 +1,19 @@
 language: java
 jdk:
   - oraclejdk8
+  
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "XvCErBecqz54V6LztRLq5btZ5SLdSdCDvkH0m1hfi1bzlAzHJTII4c0d+7Cb7QoTryphY0HE6qzZFvLDX98OHFad+ULIbQWBaRi5dsf1GBg7Z4YHvv6m4vjRdSCSk40N1Gy0nvzEjFXgu9oyi7DOFBlKTqRVddeglfasViFZk80zd0yy3u8awPM9AaB2Oc3uni3cYwiCWqle8KsmrQPP6e8odEtM+mpDg/detr7aLkeWb3D8Ko2Z7IN4xnJQN7aZxfedirnz00OROxnvgV1kHU/SrJf73m3DwnBe+vIdyjgaPqX5ENsOs9nOEDjvtOhUZ1k9fDGYxceIIyvIAC93+YLqD7BVuZi/eTbqohpazNBZjntqOjOuwwV2nYd6PHNqSJuOzWV/SzXpvRSSMFBWUdcemywsMDU/+bRt2qzJgn6sPvjzTpyOLbLwKqN2wkgRlcfKAPE4ON7jxvCbFNU12Iccqj/EEdrkr1weoVQiY3bb3/qlA2X1LxGQplmIwIltgF1kqLSCJ8nbx9njTXRKvzqsrp4LWSzx3YdEd1lOA8lxvly58LFgMUOcR3o5c9xIbbdBKD+wvjiEPF20VoeWWZV0C3gnzxSu5E7PLA5tYqEHaXBpsIAKbkU3TLxwohLLvvck+Qy88Rx1vyv51wwdBGOPBO9Wr66uNRtq0+yyLbs="
+
+addons:
+  coverity_scan:
+    project:
+      name: "eMTeeWare/DigitSum"
+      description: "Build submitted via Travis CI"
+    notification_email: mteetrinker@gmail.com
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
+    branch_pattern: coverity_scan
