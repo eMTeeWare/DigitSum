@@ -28,6 +28,15 @@ public class DigitSum {
         return digitSum;
     }
 
+    /**
+     * Calculates the digital root for an non-negative integer.
+     * The digital root is the recursive sum of digits until the result has just one digit.
+     * @param input
+     * An integer you want to calculate the digital root for. (Base 10)
+     * For negative input, a IllegalArgumentException will be thrown.
+     * @return
+     * The sum of digits for the provided input. (Base 10)
+     */
     public static int getDigitalRoot(int input) throws IllegalArgumentException {
         int digitalRoot = input;
         do{
