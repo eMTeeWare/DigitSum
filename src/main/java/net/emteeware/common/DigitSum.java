@@ -29,6 +29,10 @@ public class DigitSum {
     }
 
     public static int getDigitalRoot(int input) throws IllegalArgumentException {
-        return 0;
+        int digitalRoot = input;
+        do{
+            digitalRoot = getDigitSum(digitalRoot);
+        } while(digitalRoot > 9);
+        return digitalRoot;
     }
 }
