@@ -17,3 +17,9 @@ addons:
     build_command_prepend: "mvn clean"
     build_command:   "mvn -DskipTests=true compile"
     branch_pattern: coverity_scan
+
+# for codecov.io
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
