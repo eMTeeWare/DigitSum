@@ -5,9 +5,10 @@
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/6961/badge.svg"/>
 </a>
+[![codecov.io](https://codecov.io/github/eMTeeWare/DigitSum/coverage.svg?branch=master)](https://codecov.io/github/eMTeeWare/DigitSum?branch=master)
 
 DigitSum is supposed to become a Java library concentrating on tasks around calculating the sums of digits for numbers.
-I wasn't able to find a decent library for this purpose, so I either could have decided to upgrade my Google skills or to try out the IntelliJ IDEA, GitHub, Travis CI pipeline.
+I wasn't able to find a decent library for this purpose, so IÂ either could have decided to upgrade my Google skills or to try out the IntelliJ IDEA, GitHub, Travis CIÂ pipeline.
  I opted for the latter.
 
  Perhaps some of you will find this useful one day.
