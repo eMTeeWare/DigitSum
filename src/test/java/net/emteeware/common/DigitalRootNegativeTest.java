@@ -10,6 +10,6 @@ public class DigitalRootNegativeTest {
 
     @Test(expected=IllegalArgumentException.class)
     public void testGetDigitalRootWithNegativeInput() throws Exception {
-        int result = DigitSum.getDigitalRoot(-1);
+        long result = DigitSum.getDigitalRoot(-1);
     }
 }

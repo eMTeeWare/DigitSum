@@ -12,13 +12,13 @@ public class DigitSum {
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
-    public static int getDigitSum(int input) throws IllegalArgumentException {
+    public static long getDigitSum(long input) throws IllegalArgumentException {
         if(input < 0) {
             throw new IllegalArgumentException("Input for getDigitSum() must not be negative.");
         }
-        int digitSum = 0;
-        int summedNumber = input;
-        int nextDigit;
+        long digitSum = 0;
+        long summedNumber = input;
+        long nextDigit;
          do {
             nextDigit = summedNumber%10;
             digitSum += nextDigit;
@@ -37,8 +37,8 @@ public class DigitSum {
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
-    public static int getDigitalRoot(int input) throws IllegalArgumentException {
-        int digitalRoot = input;
+    public static long getDigitalRoot(long input) throws IllegalArgumentException {
+        long digitalRoot = input;
         do{
             digitalRoot = getDigitSum(digitalRoot);
         } while(digitalRoot > 9);
