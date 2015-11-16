@@ -29,14 +29,15 @@ public class DigitalRootTest {
                 {71,8},{72,9},{73,1},{74,2},{75,3},{76,4},{77,5},{78,6},{79,7},{80,8},
                 {81,9},{82,1},{83,2},{84,3},{85,4},{86,5},{87,6},{88,7},{89,8},{90,9},
                 {91,1},{92,2},{93,3},{94,4},{95,5},{96,6},{97,7},{98,8},{99,9},{100,1},
-                {78537, 3},{123912, 9},{999_999_999,9},{1_234_567_890,9},{2_147_483_647,1}
+                {78537, 3},{123912, 9},{999_999_999,9},{1_234_567_890,9},{2_147_483_647,1},
+                {0xF,6}, {0xFF, 3}, {010,8}, {2_147_483_648L,2}, {9_223_372_036_854_775_807L,7}
         });
     }
 
-    private int input;
-    private int expectedResult;
+    private long input;
+    private long expectedResult;
 
-    public DigitalRootTest(int input, int expectedResult) {
+    public DigitalRootTest(long input, long expectedResult) {
         this.input = input;
         this.expectedResult = expectedResult;
     }

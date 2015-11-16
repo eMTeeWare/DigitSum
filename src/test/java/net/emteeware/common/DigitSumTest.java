@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  * Created by Merlin Thomas on 2015-11-08.
- *  Copyright 2015 eMTeeWare
+ * ï¿½Copyright 2015 eMTeeWare
  */
 
 @RunWith(Parameterized.class)
@@ -30,14 +30,16 @@ public class DigitSumTest {
                 {73,10},{74,11},{75,12},{76,13},{77,14},{78,15},{79,16},{80,8},{81,9},
                 {82,10},{83,11},{84,12},{85,13},{86,14},{87,15},{88,16},{89,17},{90,9},
                 {91,10},{92,11},{93,12},{94,13},{95,14},{96,15},{97,16},{98,17},{99,18},{100,1},
-                {78537, 30},{123912, 18},{999_999_999,81},{1_234_567_890,45},{2_147_483_647,46}
+                {78537, 30},{123912, 18},{999_999_999,81},{1_234_567_890,45},{2_147_483_647,46},
+                {0xF,6}, {0xFF, 12}, {010,8}, {2_147_483_648L,47}, {9_223_372_036_854_775_807L,88}
+
         });
     }
 
-    private int input;
-    private int expectedResult;
+    private long input;
+    private long expectedResult;
 
-    public DigitSumTest(int input, int expectedResult) {
+    public DigitSumTest(long input, long expectedResult) {
         this.input = input;
         this.expectedResult = expectedResult;
     }
