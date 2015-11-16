@@ -4,7 +4,14 @@ package net.emteeware.common;
  * Created by Merlin Thomas on 2015-11-08.
  * Copyright 2015 eMTeeWare
  */
-public class DigitSum {
+public final class DigitSum {
+    /**
+     * Constructor is private to prevent instantiation of this class.
+     * It is meant as a static class only providing static methods.
+     */
+    private DigitSum() {
+    }
+
     /**
      * Calculates the sum of digit for non-negative integers.
      * All calculations will take place for base 10, regardless of the base of the input value.
