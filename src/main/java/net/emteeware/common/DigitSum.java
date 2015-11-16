@@ -6,9 +6,11 @@ package net.emteeware.common;
  */
 public class DigitSum {
     /**
+     * Calculates the sum of digit for non-negative integers.
+     * All calculations will take place for base 10, regardless of the base of the input value.
      * @param input
-     * An integer you want to calculate the sum of digits for. (Base 10)
-     * For negative input, a IllegalArgumentException will be thrown.
+     * A long you want to calculate the sum of digits for. (Base 8, 10 or 16)
+     * For negative input, an IllegalArgumentException will be thrown.
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
@@ -31,11 +33,12 @@ public class DigitSum {
     /**
      * Calculates the digital root for an non-negative integer.
      * The digital root is the recursive sum of digits until the result has just one digit.
+     * All calculations will take place for base 10, regardless of the base of the input value.
      * @param input
-     * An integer you want to calculate the digital root for. (Base 10)
-     * For negative input, a IllegalArgumentException will be thrown.
+     * A long value you want to calculate the digital root for. (Base 8, 10 or 16)
+     * For negative input, an IllegalArgumentException will be thrown.
      * @return
-     * The sum of digits for the provided input. (Base 10)
+     * The digital root for the provided input. (Base 10)
      */
     public static long getDigitalRoot(long input) throws IllegalArgumentException {
         long digitalRoot = input;
