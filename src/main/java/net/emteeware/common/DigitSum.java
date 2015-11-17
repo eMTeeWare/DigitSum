@@ -21,15 +21,15 @@ public final class DigitSum {
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
-    public static long getDigitSum(long input) throws IllegalArgumentException {
+    public static int getDigitSum(long input) throws IllegalArgumentException {
         if(input < 0) {
             throw new IllegalArgumentException("Input for getDigitSum() must not be negative.");
         }
-        long digitSum = 0;
+        int digitSum = 0;
         long summedNumber = input;
-        long nextDigit;
+        int nextDigit;
          do {
-            nextDigit = summedNumber%10;
+            nextDigit = (int)(summedNumber%10); // maximum 9, so it fits into an int
             digitSum += nextDigit;
             summedNumber /= 10;
         } while(summedNumber > 0);

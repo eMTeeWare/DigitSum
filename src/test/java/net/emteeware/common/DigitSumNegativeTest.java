@@ -10,6 +10,6 @@ public class DigitSumNegativeTest {
 
     @Test(expected=IllegalArgumentException.class)
     public void testGetDigitSumWithNegativeInput() throws Exception {
-        long result = DigitSum.getDigitSum(-1);
+        int result = DigitSum.getDigitSum(-1);
     }
 }

@@ -38,9 +38,9 @@ public class DigitSumTest {
     }
 
     private long input;
-    private long expectedResult;
+    private int expectedResult;
 
-    public DigitSumTest(long input, long expectedResult) {
+    public DigitSumTest(long input, int expectedResult) {
         this.input = input;
         this.expectedResult = expectedResult;
     }
