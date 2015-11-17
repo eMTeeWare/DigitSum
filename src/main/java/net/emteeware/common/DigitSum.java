@@ -47,11 +47,11 @@ public final class DigitSum {
      * @return
      * The digital root for the provided input. (Base 10)
      */
-    public static long getDigitalRoot(long input) throws IllegalArgumentException {
+    public static int getDigitalRoot(long input) throws IllegalArgumentException {
         long digitalRoot = input;
         do{
             digitalRoot = getDigitSum(digitalRoot);
         } while(digitalRoot > 9);
-        return digitalRoot;
+        return (int)digitalRoot; //max value of digitalRoot is 9, so it fits into an int
     }
 }

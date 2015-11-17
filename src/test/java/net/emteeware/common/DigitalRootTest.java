@@ -36,9 +36,9 @@ public class DigitalRootTest {
     }
 
     private long input;
-    private long expectedResult;
+    private int expectedResult;
 
-    public DigitalRootTest(long input, long expectedResult) {
+    public DigitalRootTest(long input, int expectedResult) {
         this.input = input;
         this.expectedResult = expectedResult;
     }
