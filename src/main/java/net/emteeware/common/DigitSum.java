@@ -4,13 +4,7 @@ package net.emteeware.common;
  * Created by Merlin Thomas on 2015-11-08.
  * Copyright 2015 eMTeeWare
  */
-public final class DigitSum {
-    /**
-     * Constructor is private to prevent instantiation of this class.
-     * It is meant as a static class only providing static methods.
-     */
-    private DigitSum() {
-    }
+public interface DigitSum {
 
     /**
      * Calculates the sum of digit for non-negative integers.
@@ -21,7 +15,7 @@ public final class DigitSum {
      * @return
      * The sum of digits for the provided input. (Base 10)
      */
-    public static int getDigitSum(long input) throws IllegalArgumentException {
+    static int getDigitSum(long input) throws IllegalArgumentException {
         if(input < 0) {
             throw new IllegalArgumentException("Input for getDigitSum() must not be negative.");
         }
@@ -47,7 +41,7 @@ public final class DigitSum {
      * @return
      * The digital root for the provided input. (Base 10)
      */
-    public static int getDigitalRoot(long input) throws IllegalArgumentException {
+    static int getDigitalRoot(long input) throws IllegalArgumentException {
         long digitalRoot = input;
         do{
             digitalRoot = getDigitSum(digitalRoot);
